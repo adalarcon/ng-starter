@@ -1,4 +1,18 @@
-# Test REST API
+# Installation
+
+## Node
+npm install  
+npm start
+
+## Angular Application
+
+http://localhost:4600/
+
+## Rest API url
+
+http://localhost:3600/
+
+# REST API
 
 ## Employees
 
@@ -43,7 +57,12 @@ DELETE  /api/v1/orders-detail/:id
 
 ## Paging params
 
-?pager[pageSize]=2&pager[pageIndex]=1  
+pager[pageSize]  
+pager[pageIndex]  
+
+## Example 
+
+/api/v1/orders?pager[pageSize]=2&pager[pageIndex]=1  
 
 
 # Database
