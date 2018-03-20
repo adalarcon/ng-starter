@@ -2,11 +2,11 @@
 
 ## Employees
 
-GET     /api/v1/employees
-GET     /api/v1/employees/:id
-POST    /api/v1/employees
-PUT     /api/v1/employees
-DELETE  /api/v1/employees/:id
+GET     /api/v1/employees \s\s
+GET     /api/v1/employees/:id \s\s
+POST    /api/v1/employees \s\s
+PUT     /api/v1/employees \s\s
+DELETE  /api/v1/employees/:id \s\s
 
 ## Customers
 
