@@ -13,7 +13,7 @@ var Controller = {
   },
 
   findById: function(req, res){
-    console.log("[controller] findByID");
+    console.log("[controller] findByID ",req.params.id);
     DAO.findById(req.params.id).then(function(data){
 			res.json(data);
     }).catch(function (error) {

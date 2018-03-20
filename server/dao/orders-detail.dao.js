@@ -31,7 +31,11 @@ var DAO = {
     });
   },
 
-  findByOrderId: function(id){
+  findByOrderId: function(id, params){
+    params = params || {};
+    params.pager = params.pager || {};
+    params.pager.pageSize = parseInt(params.pager.pageSize) || 0;
+    params.pager.pageIndex = parseInt(params.pager.pageIndex) || 0;
     console.log("[dao] findByOrderId ",id);
     return new Promise((resolve, reject) => {
        db.find(COLLECTION, { query: {OrderID: id} }).then(function(data){

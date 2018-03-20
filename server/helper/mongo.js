@@ -18,9 +18,11 @@ const MongoModule = {
     params = params || {};
     params.pager = params.pager || {};
 
+    var limit = 0;
     var skip = 0;
     if(params.pager.pageIndex && params.pager.pageSize){
       skip = params.pager.pageSize*(params.pager.pageIndex-1);
+      limit = params.pager.pageSize;
     }
     return new Promise((resolve, reject) => {
        connection((db) => {
@@ -28,7 +30,7 @@ const MongoModule = {
            .find(params.query, params.fields)
            .sort(params.sort)
            .skip(skip)
-           .limit(params.pager.pageSize)
+           .limit(limit)
            .toArray()
            .then((obj) => {
                resolve(obj);
