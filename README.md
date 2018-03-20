@@ -50,4 +50,4 @@ DELETE  /api/v1/orders-detail/:id
 
 ## Import Database
 
-run ./export file from ./database/ directory
+run ./export file from ./database/ directory  
