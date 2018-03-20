@@ -1,0 +1,5 @@
+mongoexport -h localhost:27017 -d starter -o db/employees.json -c employees
+mongoexport -h localhost:27017 -d starter -o db/customers.json -c customers
+mongoexport -h localhost:27017 -d starter -o db/products.json -c products
+mongoexport -h localhost:27017 -d starter -o db/orders.json -c orders
+mongoexport -h localhost:27017 -d starter -o db/orders-detail.json -c orders-detail

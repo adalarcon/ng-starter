@@ -1,0 +1,5 @@
+mongoimport -h localhost:27017 -d starter --file db/employees.json
+mongoimport -h localhost:27017 -d starter --file db/customers.json
+mongoimport -h localhost:27017 -d starter --file db/products.json
+mongoimport -h localhost:27017 -d starter --file db/orders.json
+mongoimport -h localhost:27017 -d starter --file db/orders-detail.json

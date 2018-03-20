@@ -44,3 +44,10 @@ DELETE  /api/v1/orders-detail/:id
 ## Paging params
 
 ?pager[pageSize]=2&pager[pageIndex]=1  
+
+
+# Database
+
+## Import Database
+
+run ./export file from ./database/ directory
