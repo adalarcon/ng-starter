@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column>ProductName</clr-dg-column>
+  <clr-dg-column>QuantityPerUnit</clr-dg-column>
+  <clr-dg-column>UnitPrice</clr-dg-column>
+  <clr-dg-column>UnitsInStock</clr-dg-column>
+  <clr-dg-column>UnitsOnOrder</clr-dg-column>
+  <clr-dg-column>ReorderLevel</clr-dg-column>
+
+    <clr-dg-row *ngFor="let product of products">
+      <clr-dg-cell>{{product.ProductName}} </clr-dg-cell>
+      <clr-dg-cell>{{product.QuantityPerUnit}} </clr-dg-cell>
+      <clr-dg-cell>{{product.UnitPrice}} </clr-dg-cell>
+      <clr-dg-cell>{{product.UnitsInStock}} </clr-dg-cell>
+      <clr-dg-cell>{{product.UnitsOnOrder}} </clr-dg-cell>
+      <clr-dg-cell>{{product.ReorderLevel}} </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer> <span *ngIf="products">{{products.length}}</span>  products</clr-dg-footer>
+</clr-datagrid>

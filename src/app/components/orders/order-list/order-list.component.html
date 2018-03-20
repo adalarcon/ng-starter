@@ -1,0 +1,23 @@
+<clr-datagrid>
+  <clr-dg-column>OrderID</clr-dg-column>
+  <clr-dg-column>OrderDate</clr-dg-column>
+  <clr-dg-column>RequiredDate</clr-dg-column>
+  <clr-dg-column>ShippedDate</clr-dg-column>
+  <clr-dg-column>ShipName</clr-dg-column>
+  <clr-dg-column>ShipAddress</clr-dg-column>
+  <clr-dg-column> </clr-dg-column>
+
+    <clr-dg-row *ngFor="let order of orders">
+      <clr-dg-cell>{{order.OrderID}} </clr-dg-cell>
+      <clr-dg-cell>{{order.OrderDate | date}} </clr-dg-cell>
+      <clr-dg-cell>{{order.RequiredDate | date}} </clr-dg-cell>
+      <clr-dg-cell>{{order.ShippedDate | date}} </clr-dg-cell>
+      <clr-dg-cell>{{order.ShipName}} </clr-dg-cell>
+      <clr-dg-cell>{{order.ShipAddress}} </clr-dg-cell>
+      <clr-dg-cell>
+        <a href="javascript:void(0)"  (click)="onSelect(order)" >Detail</a>
+      </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer> <span *ngIf="orders">{{orders.length}}</span>  orders</clr-dg-footer>
+</clr-datagrid>

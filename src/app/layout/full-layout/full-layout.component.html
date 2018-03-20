@@ -1,0 +1,26 @@
+<clr-main-container>
+  <clr-header>
+    <div class="branding">
+      <a href="#" [routerLink]="['/home']" class="nav-link">
+        <span class="clr-icon">
+          <clr-icon shape="home"></clr-icon>
+        </span>
+        <span class="title">Test</span>
+      </a>
+    </div>
+      <div class="header-nav" [clr-nav-level]="1">
+        <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active"><span class="nav-text">Home</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/customers']" routerLinkActive="active"><span class="nav-text">Customers</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/employees']" routerLinkActive="active"><span class="nav-text">Employees</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/orders']" routerLinkActive="active"><span class="nav-text">Orders</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/products']" routerLinkActive="active"><span class="nav-text">Products</span></a>
+      </div>
+    <div class="header-actions">
+    </div>
+  </clr-header>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</clr-main-container>

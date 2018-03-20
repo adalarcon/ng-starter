@@ -1,0 +1,19 @@
+<h2>Employees</h2>
+
+<clr-datagrid>
+    <clr-dg-column>First Name</clr-dg-column>
+    <clr-dg-column>Last Name</clr-dg-column>
+    <clr-dg-column>Title</clr-dg-column>
+    <clr-dg-column>City</clr-dg-column>
+    <clr-dg-column>Country</clr-dg-column>
+
+    <clr-dg-row *ngFor="let employee of employees">
+        <clr-dg-cell>{{employee.FirstName}} </clr-dg-cell>
+        <clr-dg-cell>{{employee.LastName}} </clr-dg-cell>
+        <clr-dg-cell>{{employee.Title}} </clr-dg-cell>
+        <clr-dg-cell>{{employee.City}} </clr-dg-cell>
+        <clr-dg-cell>{{employee.Country}} </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer> <span *ngIf="employees">{{employees.length}}</span>  customers</clr-dg-footer>
+</clr-datagrid>

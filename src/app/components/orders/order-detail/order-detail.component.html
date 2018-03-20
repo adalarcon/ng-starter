@@ -1,0 +1,22 @@
+
+<div class="row">
+    <div class="col-xs-6">
+        Employee: <span *ngIf="employee">{{employee.FirstName}} {{employee.LastName}}</span>
+    </div>
+    <div class="col-xs-6">
+      Customer: <span *ngIf="customer">{{customer.CompanyName}}</span>
+    </div>
+</div>
+<clr-datagrid>
+  <clr-dg-column>Product</clr-dg-column>
+  <clr-dg-column>UnitPrice</clr-dg-column>
+  <clr-dg-column>Quantity</clr-dg-column>
+  <clr-dg-column>Discount</clr-dg-column>
+    <clr-dg-row *ngFor="let detail of orderDetail">
+      <clr-dg-cell> <span *ngIf="detail.product">{{detail.product.ProductName}}</span> </clr-dg-cell>
+      <clr-dg-cell>{{detail.UnitPrice}} </clr-dg-cell>
+      <clr-dg-cell>{{detail.Quantity}} </clr-dg-cell>
+      <clr-dg-cell>{{detail.Discount}} </clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer> <span *ngIf="orderDetail">{{orderDetail.length}}</span>  products</clr-dg-footer>
+</clr-datagrid>

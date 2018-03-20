@@ -1,0 +1,21 @@
+<h2>Customers</h2>
+
+<clr-datagrid>
+    <clr-dg-column>CompanyName</clr-dg-column>
+    <clr-dg-column>Contact Name</clr-dg-column>
+    <clr-dg-column>Contact Title</clr-dg-column>
+    <clr-dg-column>City</clr-dg-column>
+    <clr-dg-column>Country</clr-dg-column>
+    <clr-dg-column>Phone</clr-dg-column>
+
+    <clr-dg-row *ngFor="let customer of customers">
+        <clr-dg-cell>{{customer.CompanyName}}</clr-dg-cell>
+        <clr-dg-cell>{{customer.ContactName}}</clr-dg-cell>
+        <clr-dg-cell>{{customer.ContactTitle}}</clr-dg-cell>
+        <clr-dg-cell>{{customer.City}}</clr-dg-cell>
+        <clr-dg-cell>{{customer.Country}}</clr-dg-cell>
+        <clr-dg-cell>{{customer.Phone}}</clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer><span *ngIf="customers">{{customers.length}}</span>  customers</clr-dg-footer>
+</clr-datagrid>

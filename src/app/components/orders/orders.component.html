@@ -1,0 +1,20 @@
+<h2>Orders</h2>
+
+<app-order-list
+  [orders]="orders"
+  (selectEvent)="onSelect($event)">
+</app-order-list>
+
+<clr-modal [(clrModalOpen)]="open">
+  <h3 class="modal-title">Order Detail</h3>
+  <div class="modal-body">
+    <app-order-detail
+      [orderDetail]="orderDetail"
+      [customer]="customer"
+      [employee]="employee">
+    </app-order-detail>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="open = false">Close</button>
+  </div>
+</clr-modal>

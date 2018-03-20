@@ -1,27 +1,46 @@
-# AngularStarter
+# Test REST API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+## Employees
 
-## Development server
+GET     /api/v1/employees
+GET     /api/v1/employees/:id
+POST    /api/v1/employees
+PUT     /api/v1/employees
+DELETE  /api/v1/employees/:id
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Customers
 
-## Code scaffolding
+GET     /api/v1/customers
+GET     /api/v1/customers/:id
+POST    /api/v1/customers
+PUT     /api/v1/customers
+DELETE  /api/v1/customers/:id
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Products
 
-## Build
+GET     /api/v1/products
+GET     /api/v1/products/:id
+POST    /api/v1/products
+PUT     /api/v1/products
+DELETE  /api/v1/products/:id
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Orders
 
-## Running unit tests
+GET     /api/v1/orders
+GET     /api/v1/orders/:id
+POST    /api/v1/orders
+PUT     /api/v1/orders
+DELETE  /api/v1/orders/:id
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Orders detail
 
-## Running end-to-end tests
+GET     /api/v1/orders/:id/detail
+GET     /api/v1/orders-detail/
+GET     /api/v1/orders-detail/:id
+POST    /api/v1/orders-detail
+PUT     /api/v1/orders-detail
+DELETE  /api/v1/orders-detail/:id
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Paging params
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+?pager[pageSize]=2&pager[pageIndex]=1
