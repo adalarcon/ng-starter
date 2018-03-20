@@ -1,3 +1,7 @@
+# MEAN Stack boilerplate with examples 
+
+this is a mean boilerplate for MEAN Stack 
+
 # Installation
 
 ## Node
