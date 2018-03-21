@@ -5,7 +5,7 @@ import { environment }  from '../../environments/environment';
 @Injectable()
 export class DataService {
 
-  api = '/api/v1/';
+  private api = '/api/v1/';
 
   constructor( private http:HttpClient) { }
 
@@ -17,8 +17,8 @@ export class DataService {
     return this.http.get<any>(environment.serverBaseURL + this.api + collection + "/" + query);
   }
 
-  findById(collection: String, query: String){
-    return this.http.get<any>(environment.serverBaseURL + this.api + collection + "/" + query);
+  findById(collection: String, id: String){
+    return this.http.get<any>(environment.serverBaseURL + this.api + collection + "/" + id);
   }
 
   insertOne(collection, obj){

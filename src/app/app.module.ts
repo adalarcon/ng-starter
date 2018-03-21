@@ -24,7 +24,6 @@ import { DataService } from   './services/data.service';
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 import { SimpleLayoutComponent } from './layout/simple-layout/simple-layout.component';
 
-import { UIModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [

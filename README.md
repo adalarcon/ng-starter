@@ -1,12 +1,34 @@
-# MEAN Stack boilerplate with examples 
+# MEAN Stack boilerplate with examples
 
-this is a mean boilerplate for MEAN Stack 
+this is a mean boilerplate for MEAN Stack
 
 # Installation
 
 ## Node
 npm install  
+
+## Dependencies
+
+npm install -g nodemon
+npm install -g concurrently
+npm install -g @compodoc/compodoc
+
+## Start proyect
+
 npm start
+
+## Generate Angular Documentation
+
+npm run docs
+
+## Angular Build
+
+npm run build:prod  
+
+or
+
+npm run build:dev
+
 
 ## Angular Application
 
@@ -64,7 +86,7 @@ DELETE  /api/v1/orders-detail/:id
 pager[pageSize]  
 pager[pageIndex]  
 
-## Example 
+## Example
 
 /api/v1/orders?pager[pageSize]=2&pager[pageIndex]=1  
 

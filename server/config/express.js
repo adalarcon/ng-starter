@@ -9,6 +9,7 @@ const app        = express();
 console.info("[app] Setting static directory ");
 app.use(express.static(path.join(appRoot.path, 'dist')));
 app.use(express.static(path.join(appRoot.path, 'public')));
+app.use(express.static(path.join(appRoot.path, 'documentation')));
 
 // CORS
 console.info("[app] CORS enabled ");
